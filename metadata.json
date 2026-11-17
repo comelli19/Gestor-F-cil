@@ -1,0 +1,6 @@
+{
+  "name": "Gestor Fácil",
+  "description": "Plataforma web de gestão para MEIs, autônomos, prestadores de serviço e pequenos comércios em português brasileiro.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

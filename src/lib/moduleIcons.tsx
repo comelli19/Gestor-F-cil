@@ -1,0 +1,72 @@
+import {
+  BarChart3,
+  Boxes,
+  Briefcase,
+  Calendar,
+  ClipboardList,
+  Compass,
+  FileText,
+  FolderKanban,
+  Layers,
+  LayoutDashboard,
+  LayoutGrid,
+  Package,
+  Receipt,
+  Settings,
+  Shield,
+  ShoppingCart,
+  Tag,
+  Truck,
+  Users,
+  Wallet,
+  Wrench,
+} from 'lucide-react';
+import React from 'react';
+
+const MODULE_ICON_MAP: Record<string, React.ComponentType<{ className?: string }>> = {
+  LayoutDashboard,
+  Users,
+  Package,
+  Boxes,
+  ShoppingCart,
+  FileText,
+  Wrench,
+  Truck,
+  Wallet,
+  Settings,
+  BarChart3,
+  Calendar,
+  ClipboardList,
+  Tag,
+  Receipt,
+  Shield,
+  Briefcase,
+  Layers,
+  Compass,
+  FolderKanban,
+  LayoutGrid,
+};
+
+export const AVAILABLE_MODULE_ICONS: Array<{ id: string; label: string }> = [
+  { id: 'LayoutDashboard', label: 'Painel' },
+  { id: 'Users', label: 'Clientes / Pessoas' },
+  { id: 'Package', label: 'Produtos' },
+  { id: 'Boxes', label: 'Estoque' },
+  { id: 'ShoppingCart', label: 'Vendas' },
+  { id: 'FileText', label: 'Orçamentos / Documentos' },
+  { id: 'Wrench', label: 'Ordens de Serviço' },
+  { id: 'Truck', label: 'Compras / Logística' },
+  { id: 'Wallet', label: 'Financeiro' },
+  { id: 'BarChart3', label: 'Relatórios' },
+  { id: 'Calendar', label: 'Agenda' },
+  { id: 'Receipt', label: 'Notas / Fiscal' },
+  { id: 'ClipboardList', label: 'Tarefas / Checklist' },
+  { id: 'Tag', label: 'Etiquetas / Preços' },
+  { id: 'Briefcase', label: 'Projetos / Contratos' },
+  { id: 'Layers', label: 'Catálogo / Módulos' },
+  { id: 'Settings', label: 'Configurações' },
+];
+
+export function getModuleIcon(iconName: string): React.ComponentType<{ className?: string }> {
+  return MODULE_ICON_MAP[iconName] ?? LayoutGrid;
+}
